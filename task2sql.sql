@@ -3,14 +3,16 @@ CREATE TABLE Drugs(
 Id INT PRIMARY KEY IDENTITY,
 Name varchar(50),
 Price float,
-Count int
+Count int,
+DrugStoreId int FOREIGN KEY REFERENCES DrugStores
 )
 CREATE TABLE Druggists(
 Id int PRIMARY KEY IDENTITY,
 Name varchar(50),
 Surname varchar(50),
 Age int,
-Experience varchar(100)
+Experience varchar(100),
+DrugStoreId int FOREIGN KEY REFERENCES DrugStores
 )
  CREATE TABLE DrugStores(
  Id int PRIMARY KEY IDENTITY,
@@ -18,15 +20,13 @@ Experience varchar(100)
  Adress varchar(80),
  Contactnumber varchar(40),
  Creationdate date,
- DruggistId int FOREIGN KEY REFERENCES Druggists,
- DrugId int FOREIGN KEY REFERENCES Drugs
+OwnerId int FOREIGN KEY REFERENCES Owners
  )
 
  CREATE TABLE Owners(
  Id int PRIMARY KEY IDENTITY,
  Name varchar(50),
  Surname varchar(50),
- DrugstoreId int FOREIGN KEY REFERENCES DrugStores
  )
   SELECT*FROM Druggists
   SElECT*FROM Drugs
