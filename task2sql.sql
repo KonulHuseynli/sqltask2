@@ -34,17 +34,17 @@ OwnerId int FOREIGN KEY REFERENCES Owners
   SELECT*FROM DrugStores
 
   INSERT INTO Drugs
-  VALUES('nimesil',0.50,4),
-  ('Spazmalqon',1.20,8);
+  VALUES('nimesil',0.50,4,1),
+  ('Spazmalqon',1.20,8,2);
 
   INSERT INTO Druggists
-  VALUES('Gunay','Huseynli',22,'Zeferan aptekde'),
-  ('Aysun','Huseynli',19,'yoxdur');
+  VALUES('Gunay','Huseynli',22,'Zeferan aptekde',1),
+  ('Aysun','Huseynli',19,'yoxdur',2);
 
   INSERT INTO DrugStores
-  VALUES('Canon','Bakixanov','+99455432132','2001-12-03',1,1),
-        ('Zefer','Genclik','+994517544354','1987-7-04',2,2);
+  VALUES('Canon','Bakixanov','+99455432132','2001-12-03',1),
+        ('Zefer','Genclik','+994517544354','1987-7-04',2);
 
 
 INSERT INTO Owners
-VALUES('Konul','Huseynli',1)
+VALUES('Konul','Huseynli')
